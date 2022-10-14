@@ -1,0 +1,62 @@
+.confetti {
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+    position: absolute;
+    top: -20px;
+    z-index: 2;
+    animation: falling 5s infinite;
+    overflow: hidden;
+}
+
+@keyframes falling {
+    0% {
+        top: -20px;
+        transform: rotate(180deg);
+    }
+
+    20% {
+        transform: rotate(180deg);
+        transform: translateX(40px);
+    }
+
+    40% {
+        transform: translateX(20px) rotate(180deg);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateX(30px) rotate(180deg);
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0;
+        top: 100%;
+        transform: translateX(20px) rotate(360deg);
+    }
+}
+.btnContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#boomBtn {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(64, 66, 235);
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+#stopBtn {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(245, 49, 53);
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+}
